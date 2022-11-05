@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+<style>
+    .red {
+
+        width: 8em;
+
+        height: 8em;
+
+        position: absolute;
+
+        margin: 4em;
+
+        background-color: red;
+
+        opacity: .6;
+        z-index: 0;
+
+    }
+
+    .blue {
+
+        width: 8em;
+
+        height: 8em;
+
+        position: absolute;
+
+        margin: 8em;
+
+        background-color: blue;
+
+        opacity: .6;
+        z-index: 1;
+
+    }
+
+    button {
+        margin: 2em;
+    }
+</style>
+
+<body>
+
+    <div class="red" id="red" onclick="blue()"></div>
+
+    <div class="blue" id="blue" onclick="red()"></div>
+   
+    <script>
+         function blue() 
+         {
+    document.getElementById("red").style.zIndex=1;
+    document.getElementById("blue").style.zIndex=0;
+         }
+        function red()
+         {
+    document.getElementById("red").style.zIndex=0;
+    document.getElementById("blue").style.zIndex=1;
+         }
+    </script>
+
+</body>
+
+</html>
